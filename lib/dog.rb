@@ -79,6 +79,8 @@ class Dog
      WHERE name = ?
      LIMIT 1
    SQL
+ end
+ 
    def self.find_by_id(id)
   sql = <<-SQL
     SELECT *
