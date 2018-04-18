@@ -55,10 +55,10 @@ class Dog
 
     def self.create_table
       sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS students (
+      CREATE TABLE IF NOT EXISTS dogss (
         id INTEGER PRIMARY KEY,
         name TEXT,
-        grade TEXT
+        breed TEXT
       )
       SQL
 
