@@ -37,7 +37,7 @@ class Dog
     id = row[0]
     name =  row[1]
     breed = row[2]
-    self.new(id, name, grade)
+    self.new(id, name, breed)
     end
 
   def save
@@ -45,7 +45,7 @@ class Dog
     self.update
     else
     sql = <<-SQL
-      INSERT INTO students (name, grade)
+      INSERT INTO dogs (name, breed)
       VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, self.name, self.grade)
