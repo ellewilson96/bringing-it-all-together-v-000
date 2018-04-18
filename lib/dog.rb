@@ -21,7 +21,7 @@ class Dog
       DB[:conn].execute(sql)
     end
 
-    
+
     def self.drop_table
       sql = "DROP TABLE IF EXISTS dogs"
       DB[:conn].execute(sql)
@@ -41,8 +41,8 @@ class Dog
     self
     end
 
-    def self.create(name, breed)
-      new_dog = Dog.new(name, breed)
+    def self.create(name:, breed:)
+      new_dog = Dog.new(name: name, breed: breed)
       new_dog.save
       new_dog
     end
@@ -73,7 +73,7 @@ class Dog
   end
   end
 
-  
+
 
 
     def update
