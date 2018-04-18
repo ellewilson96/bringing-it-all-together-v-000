@@ -72,7 +72,7 @@ class Dog
        dog
      end
 
-     
+
    def self.new_from_db(row)
    id = row[0]
    name =  row[1]
@@ -96,7 +96,7 @@ class Dog
     WHERE id = ?
     LIMIT 1
   SQL
-  
+
   DB[:conn].execute(sql,id).map do |row|
     self.new_from_db(row)
   end.first
